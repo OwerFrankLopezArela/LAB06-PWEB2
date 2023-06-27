@@ -1,0 +1,15 @@
+<!-- destinos_turisticos.html -->
+
+{% for destino in destinos %}
+  <div>
+    <h2>{{ destino.nombreCiudad }}</h2>
+    <p>{{ destino.descripcionCiudad }}</p>
+    <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }}">
+    <p>Precio: ${{ destino.precioTour }}</p>
+    {% if destino.ofertaTour %}
+      <p>¡Oferta especial!</p>
+    {% endif %}
+  </div>
+{% empty %}
+  <p>No hay destinos turísticos disponibles.</p>
+{% endfor %}
