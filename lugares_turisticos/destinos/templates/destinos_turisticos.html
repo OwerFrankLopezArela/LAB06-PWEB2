@@ -1,15 +1,47 @@
-<!-- destinos_turisticos.html -->
+{% load static %}
 
-{% for destino in destinos %}
-  <div>
-    <h2>{{ destino.nombreCiudad }}</h2>
-    <p>{{ destino.descripcionCiudad }}</p>
-    <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }}">
-    <p>Precio: ${{ destino.precioTour }}</p>
-    {% if destino.ofertaTour %}
-      <p>¡Oferta especial!</p>
-    {% endif %}
-  </div>
-{% empty %}
-  <p>No hay destinos turísticos disponibles.</p>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lugares Turísticos</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Ingresar</a></li>
+                <li><a href="#">Registrarse</a></li>
+                <li><a href="#">Carrito de compras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Lugares Turísticos</h1>
+
+        <div class="destinos-grid">
+          {% for destino in destinos %}
+          <div class="destino">
+              <h2>{{ destino.nombreCiudad }}</h2>
+              <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }}">
+              <p>Precio: {{ destino.precioTour }}</p>
+              {% if destino.ofertaTour %}
+              <p class="oferta">¡En oferta!</p>
+              {% endif %}
+              <a href="#" class="ver-btn">VER</a>
+          </div>
+          {% endfor %}
+      </div>
+      
+    </main>
+
+    <footer>
+        <p>© 2023 Lugares Turísticos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
