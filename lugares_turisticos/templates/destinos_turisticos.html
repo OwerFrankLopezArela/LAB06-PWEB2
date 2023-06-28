@@ -17,14 +17,14 @@
                 <li><a href="" class="sub">Inicio</a></li>
 
                 {% if user.is_authenticated %}
-                <li>Hello, {{user.first_name}}</li>
-                <li><a href="cuentas/logout" class="sub">Salir</a></li>
-                {% else %}	
-                <li><a href="cuentas/register" class="sub">Registrarse</a></li>
-                <li><a href="cuentas/login" class="sub">Ingresar</a></li>
+                    <li class="sub welcome-message">Hello, <span>{{user.first_name}}</span></li>
+                    <li><a href="cuentas/logout" class="sub">Salir</a></li>
+                {% else %}
+                    <li><a href="cuentas/register" class="sub">Registrarse</a></li>
+                    <li><a href="cuentas/login" class="sub">Ingresar</a></li>
                 {% endif %}
 
-                <li><a href="" class="sub">Loguito de carrito</a></li>
+                <li><a href="#" class="carrito" data-counter="0">&#128722;</a></li>
             </ul>
         </nav>
     </header>

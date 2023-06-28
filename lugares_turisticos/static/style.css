@@ -7,7 +7,7 @@
   
   /* Estilos generales */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #f2f2f2;
     color: #333;
   }
@@ -21,39 +21,83 @@
   /* Estilos del encabezado */
   header {
     background-color: #333;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .logo-header {
-    width: 90px; 
-    height: 90px;
 }
 
-  .logo img {
-    height: 80px;
-    
-  }
+.logo img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
 
-  .sub {
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-  }
-  nav ul {
+nav ul {
+    display: flex;
     list-style-type: none;
-  }
-  
-  nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+/* Estilos para los enlaces */
+.sub {
     display: inline-block;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    color: #333;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
     text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.sub:hover {
+    background-color: #ccc;
+}
+
+/* Estilos específicos para el mensaje de bienvenida */
+.welcome-message span {
     font-weight: bold;
-  }
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* Estilos para el enlace del carrito */
+.carrito {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.carrito:hover {
+    background-color: #ccc;
+}
+
+.carrito::after {
+    content: attr(data-counter);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+}
   
   /* Estilos del contenido principal */
   main {
