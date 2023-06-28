@@ -5,29 +5,27 @@
 
 <div class="centered-container">
     <div class="detalle-destino">
-        <div class="nombre-ciudad">
-            <h2>{{ destino.nombreCiudad }}</h2>
+        <div class="imagen">
+            <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }}" class="imagen-ciudad">
         </div>
-        <div class="descripcion-ciudad">
-            <div class="imagen">
-                <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }}" class="imagen-ciudad">
-            </div>
-            <div class="texto">
+        <div class="descripcion-precio">
+            <div class="descripcion">
+                <h2>{{ destino.nombreCiudad }}</h2>
                 <p>{{ destino.descripcionCiudad }}</p>
             </div>
-        </div>
-        <div class="precio">
-            <div>
-                <p>Precio: {{ destino.precioTour }}</p>
+            <div class="precio-oferta">
+                <div class="precio">
+                    <p>Precio: {{ destino.precioTour }}</p>
+                </div>
+                <div>
+                    {% if destino.ofertaTour %}
+                        <p class="oferta">¡En oferta!</p>
+                    {% endif %}
+                </div>
+                <div class="comprar-btn">
+                    <a href="http://127.0.0.1:8000/cuentas/login" class="comprar-btn">COMPRAR</a>
+                </div>
             </div>
-            <div>
-                {% if destino.ofertaTour %}
-                    <p class="oferta">¡En oferta!</p>
-                {% endif %}
-            </div>
-        </div>
-        <div class="comprar-btn">
-            <a href="#" class="comprar-btn">COMPRAR</a>
         </div>
     </div>
 </div>
