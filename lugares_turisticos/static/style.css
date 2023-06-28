@@ -1,11 +1,11 @@
-/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Estilos generales */
+    /* Estilos de la pagina destinos turisticoos */
+
   body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #f2f2f2;
@@ -18,8 +18,7 @@
     padding: 20px;
   }
   
-  /* Estilos del encabezado */
-  header {
+ header {
     background-color: #333;
     padding: 10px;
     display: flex;
@@ -44,7 +43,6 @@ nav ul li {
     margin-left: 10px;
 }
 
-/* Estilos para los enlaces */
 .sub {
     display: inline-block;
     padding: 10px;
@@ -59,14 +57,12 @@ nav ul li {
     background-color: #ccc;
 }
 
-/* Estilos específicos para el mensaje de bienvenida */
 .welcome-message span {
     font-weight: bold;
     text-transform: uppercase;
     color: #555;
 }
 
-/* Estilos para el enlace del carrito */
 .carrito {
     position: relative;
     display: inline-block;
@@ -99,7 +95,6 @@ nav ul li {
     border-radius: 50%;
 }
   
-  /* Estilos del contenido principal */
   main {
     padding: 20px;
   }
@@ -153,7 +148,6 @@ nav ul li {
     border-radius: 5px;
   }
   
-  /* Estilos del pie de página */
   footer {
     background-color: #333;
     color: #fff;
