@@ -217,12 +217,8 @@ nav ul li {
   }
   
     /* --------------Estilos de loginnn y registerr--------------- */
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
-  }
-  
-  form {
+   
+    form {
       background-color: #fff;
       width: 400px;
       margin: 0 auto;
@@ -234,6 +230,7 @@ nav ul li {
   input[type="text"],
   input[type="email"],
   input[type="password"] {
+      align-content: center;
       width: 100%;
       padding: 10px;
       margin-bottom: 10px;
@@ -241,8 +238,8 @@ nav ul li {
       border-radius: 5px;
   }
   
-  input[type="Submit"] {
-      background-color: #4CAF50;
+  input[type="submit"] {
+      background-color: #333;
       color: #fff;
       padding: 10px 20px;
       border: none;
@@ -250,19 +247,49 @@ nav ul li {
       cursor: pointer;
   }
   
-  input[type="Submit"]:hover {
-      background-color: #45a049;
+  input[type="submit"]:hover {
+      background-color: #333;
   }
   
-  div {
+  div.message {
       margin-top: 10px;
       text-align: center;
   }
   
   h3 {
-      color: #4CAF50;
+      color: #333;
       font-size: 16px;
       margin: 5px 0;
+  }
+  
+  
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  nav ul li {
+      margin-right: 20px;
+  }
+  
+  nav ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+  }
+  
+  .navbar a.carrito {
+      font-size: 24px;
+  }
+  
+  .titLoginRegister {
+      text-align: center;
+      color: #333;
+      font-size: 28px;
+      margin-top: 30px;
+      margin-bottom: 20px;
   }
   
       /* --------------Estilos de detalles de lso destinos--------------- */
