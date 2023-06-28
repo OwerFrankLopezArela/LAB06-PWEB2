@@ -31,6 +31,7 @@
         </nav>
     </header>
 
+    {% block content %}
     <div class="turismo-peru1">
         <h2 >LUGARES TURISTICOS</h2>
     </div>
@@ -65,7 +66,7 @@
                     {% if destino.ofertaTour %}
                         <p class="oferta">¡En oferta!</p>
                     {% endif %}
-                    <a href="#" class="ver-btn">VER</a>
+                    <a href="{% url 'detalle_destino' destino.id %}" class="ver-btn">VER</a>
                 </div>
             {% endfor %}
         </div>
@@ -79,9 +80,8 @@
         <div align="center">
             <iframe src="https://www.google.com/maps/d/embed?mid=1rpFrIXZgjMaukWY1wfwjOBEow7D4sB4&ehbc=2E312F" width="640" height="480"></iframe>        </div>
     </div>
-
-
-
+    {% endblock %}
+    
     <footer>
         <p>© 2023 Lugares Turísticos. Todos los derechos reservados. Hecho por Ower Lopez</p>
     </footer>

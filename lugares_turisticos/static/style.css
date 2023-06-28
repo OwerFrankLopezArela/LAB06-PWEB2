@@ -265,3 +265,86 @@ nav ul li {
       margin: 5px 0;
   }
   
+      /* --------------Estilos de detalles de lso destinos--------------- */
+      body {
+        background-color: #f4f4f4;
+      }
+      
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .nombre-ciudad {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      
+      .descripcion-ciudad {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .descripcion-ciudad .imagen {
+        flex: 1;
+        margin-right: 20px;
+      }
+      
+      .descripcion-ciudad .texto {
+        flex: 2;
+      }
+      
+      .imagen-ciudad {
+        max-width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+      
+      .precio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      
+      .precio .comprar-btn {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      
+      .oferta {
+        padding: 10px;
+        background-color: #ff0000;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      
+      @media (max-width: 600px) {
+        .descripcion-ciudad {
+          flex-direction: column;
+        }
+      
+        .descripcion-ciudad .imagen,
+        .descripcion-ciudad .texto {
+          margin-right: 0;
+        }
+      }
+      
