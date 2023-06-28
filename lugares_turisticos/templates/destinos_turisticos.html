@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 
 <!DOCTYPE html>
 <html>
@@ -13,10 +14,17 @@
         </div>
         <nav>
             <ul >
-                <li><a href="#" class="sub">Inicio</a></li>
-                <li><a href="#" class="sub">Ingresar</a></li>
-                <li><a href="{% url 'registro' %}" class="sub">Registrarse</a></li>
-                <li><a href="{% url 'inicio_sesion' %}" class="sub">Loguito de carrito</a></li>
+                <li><a href="" class="sub">Inicio</a></li>
+
+                {% if user.is_authenticated %}
+                <li>Hello, {{user.first_name}}</li>
+                <li><a href="cuentas/logout" class="sub">Salir</a></li>
+                {% else %}	
+                <li><a href="cuentas/register" class="sub">Registrarse</a></li>
+                <li><a href="cuentas/login" class="sub">Ingresar</a></li>
+                {% endif %}
+
+                <li><a href="" class="sub">Loguito de carrito</a></li>
             </ul>
         </nav>
     </header>
