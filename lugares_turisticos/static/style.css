@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
   }
   
     /* Estilos de la pagina destinos turisticoos */
@@ -20,27 +22,29 @@
   
  header {
     background-color: #333;
-    padding: 10px;
+    padding: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 110px;
     height: auto;
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 10px;
 }
 
 nav ul li {
-    margin-left: 10px;
+    margin-left: 20px;
+
 }
 
 .sub {
@@ -95,6 +99,63 @@ nav ul li {
     border-radius: 50%;
 }
   
+
+.turismo-peru {
+  background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+  margin: 20px;
+}
+
+.turismo-peru1 {
+  color:#fff;
+  background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  margin: 20px;
+}
+
+.turismo-peru3 {
+  align-items: center;
+  color:#fff;
+  background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.turismo-peru h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.turismo-peru .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5 px;
+}
+
+.turismo-peru .image img {
+  max-width: 600px;
+  height: auto;
+}
+
+.turismo-peru .text p {
+  text-align: justify;
+  font-size: 18px;
+  margin: 1px 30px;
+}
+
+
+
   main {
     padding: 20px;
   }

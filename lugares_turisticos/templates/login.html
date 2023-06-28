@@ -6,18 +6,33 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Ingresar...</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+
+<header>
+    <div class="logo">
+        <img src="https://viajaahoraperu.com/wp-content/uploads/2020/10/logo-final-agencia-de-viajes-2.png" alt="Logo">
+    </div>
+    <nav>
+        <ul >
+            <li><a href="http://127.0.0.1:8001/" class="sub">Inicio</a></li>
+            <li><a href="#" class="carrito" data-counter="0">&#128722;</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
+
+    <h1 class="titLoginRegister" align="center">INGRESAR</h1>
+
     <form action="login" method="post">
         {% csrf_token %}
-        <input type="text" name="username" placeholder="username"><br>
-        <input type="password" name="password" placeholder="password"><br>
+        <input type="text" name="username" placeholder="Usuario"><br>
+        <input type="password" name="password" placeholder="Contraseña"><br>
         <input type="Submit">
     </form>
-
 
     <div>
             {% for message in messages %}
